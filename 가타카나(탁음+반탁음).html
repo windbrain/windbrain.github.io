@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script type="text/javascript"> 
+        var bDisplay = true;
+        function doDisplay(){ 
+            var con = document.getElementById("myDIV"); 
+            if(con.style.display=='none'){ 
+                con.style.display = 'block'; 
+            }else{ 
+                con.style.display = 'none'; 
+            } 
+        } 
+    </script> 
+</head>
+<body>
+    <script language="JavaScript">
+        var random_text = [
+            //탁음
+            "ガ 가", "ギ 기", "グ 구", "ゲ 게", "ゴ 고",
+            "ザ 자", "ジ 지", "ズ 주", "ゼ 제", "ゾ 조",
+            "ダ 다", "ヂ 지", "ヅ 주", "デ 데", "ド 도",
+            "バ 바", "ビ 비", "ブ 부", "ベ 베", "ボ 보",
+
+            //반탁음
+            "パ 파", "ピ 피", "プ 푸", "ペ 페", "ポ 포"
+        ];
+        var random_number = Math.floor(Math.random() * random_text.length);
+    </script>
+    <h1 style="font-size:150px;">
+        <script>
+            document.write(random_text[random_number].split(" ")[0]);
+        </script>
+    </h1>
+    <a href="javascript:doDisplay();">발음보기</a>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:history.back()">뒤로가기</a>&nbsp;&nbsp;&nbsp;
+    <a href="#" onClick="top.location='javascript:location.reload()'">새로고침</a>
+    <div id="myDIV" style="display:none"> 
+        <h1 style="font-size:150px;"><script>
+            document.write(random_text[random_number].split(" ")[1]);
+        </script></h1> 
+    </div> 
+</body>
+</html>

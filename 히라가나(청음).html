@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script type="text/javascript"> 
+        var bDisplay = true;
+        function doDisplay(){ 
+            var con = document.getElementById("myDIV"); 
+            if(con.style.display=='none'){ 
+                con.style.display = 'block'; 
+            }else{ 
+                con.style.display = 'none'; 
+            } 
+        } 
+    </script> 
+</head>
+<body>
+    <script language="JavaScript">
+        var random_text = ["あ 아", "い 이", "う 우", "え 에", "お 오", "か 카", "き 키", "く 쿠", "け 케", "こ 코", "さ 사", "し 시", "す 스", "せ 세", "そ 소", "た 타", "ち 치", "つ 츠", "て 테", "と 토", "な 나", "に 니", "ぬ 누", "ね 네", "の 노", "は 하", "ひ 히", "ふ 후", "へ 헤", "ほ 호", "ま 마", "み 미", "む 무", "め 메", "も 모", "や 야", "ゆ 유", "よ 요", "ら 라", "り 리", "る 루", "れ 레", "ろ 로", "わ 와", "を 오", "ん 응"];
+        var random_number = Math.floor(Math.random() * random_text.length);
+    </script>
+    <h1 style="font-size:150px;">
+        <script>
+            document.write(random_text[random_number].split(" ")[0]);
+        </script>
+    </h1>
+    <a href="javascript:doDisplay();">발음보기</a>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:history.back()">뒤로가기</a>&nbsp;&nbsp;&nbsp;
+    <a href="#" onClick="top.location='javascript:location.reload()'">새로고침</a>
+    <div id="myDIV" style="display:none"> 
+        <h1 style="font-size:150px;"><script>
+            document.write(random_text[random_number].split(" ")[1]);
+        </script></h1> 
+    </div> 
+</body>
+</html>
